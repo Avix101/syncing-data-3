@@ -1,0 +1,19 @@
+{
+  "name": "blans-syncing-data-3",
+  "version": "1.0.0",
+  "description": "A simple demo of server-side physics calculation and client-side lerping",
+  "main": "./server/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Avix101/syncing-data-3.git"
+  },
+  "author": "Stasha Blank",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Avix101/syncing-data-3/issues"
+  },
+  "homepage": "https://github.com/Avix101/syncing-data-3#readme"
+}
