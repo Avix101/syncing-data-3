@@ -57,6 +57,7 @@ const init = (ioInstance) => {
 
     socket.on('disconnect', () => {
       io.sockets.in('global-room').emit('deleteDoge', doges[socket.hash]);
+      doges[socket.hash] = undefined;
       delete doges[socket.hash];
       socket.leave('global-room');
     });
