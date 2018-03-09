@@ -39,12 +39,12 @@ const init = (ioInstance) => {
 
     socket.emit('setDoge', doges[hash]);
 
-    const dogeKeys = Object.keys(doges);
-    
-	//Doesn't work as intended
-	/*for (let i = 0; i < dogeKeys.length; i++) {
+    // const dogeKeys = Object.keys(doges);
+
+    // Doesn't work as intended
+    /* for (let i = 0; i < dogeKeys.length; i++) {
       socket.emit('updateDoge', doges[dogeKeys[i]]);
-    }*/
+    } */
 
     socket.on('dogeMovement', (data) => {
       doges[socket.hash] = data;
