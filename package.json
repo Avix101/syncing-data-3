@@ -4,7 +4,12 @@
   "description": "A simple demo of server-side physics calculation and client-side lerping",
   "main": "./server/app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "babel ./client --out-file ./hosted/bundle.js",
+    "watch": "babel --watch ./client --out-file ./hosted/bundle.js",
+    "nodemon": "nodemon --watch ./server ./server/app.js",
+    "start": "node ./server/app.js",
+    "pretest": "eslint ./server --fix",
+    "test": "echo \"Tests Complete\""
   },
   "repository": {
     "type": "git",
@@ -15,5 +20,18 @@
   "bugs": {
     "url": "https://github.com/Avix101/syncing-data-3/issues"
   },
-  "homepage": "https://github.com/Avix101/syncing-data-3#readme"
+  "homepage": "https://github.com/Avix101/syncing-data-3#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "socket.io": "^2.0.4",
+    "xxhashjs": "^0.2.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "eslint": "^4.18.2",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.9.0",
+    "nodemon": "^1.17.1"
+  }
 }
